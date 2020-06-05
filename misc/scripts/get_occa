@@ -1,0 +1,25 @@
+#!/bin/sh
+
+DEST_DIR=$(pwd)
+WORK_DIR=$(mktemp -d)
+BRANCH=master
+REPO=https://github.com/libocca/occa.git
+
+cleanup() {
+  rm -rf "$WORK_DIR"
+  echo ""
+  echo "Deleted working directory $WORK_DIR"
+}
+trap cleanup EXIT
+
+echo "Building occa tarball in $WORK_DIR"
+echo ""
+
+# Get p4est
+cd "$WORK_DIR" || exit
+git clone --recursive -b "$BRANCH" "$REPO"
+cd occa || exit
+
+VERSION=$(git describe --tags)
+mkdir -p "$DEST_DIR"
+git archive --format=tar.gz --prefix=occa-"$VERSION"/ HEAD >"$DEST_DIR"/occa-"$VERSION".tar.gz
