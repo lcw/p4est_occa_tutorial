@@ -2,7 +2,7 @@
 
 DEST_DIR=$(pwd)
 WORK_DIR=$(mktemp -d)
-BRANCH=master
+BRANCH=prev3-develop
 REPO=https://github.com/cburstedde/p4est
 
 cleanup() {
