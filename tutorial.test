@@ -1,0 +1,8 @@
+#!/bin/sh
+
+run () {
+  ./tutorial
+}
+
+# Clean the output of build / platform specific output
+run | sed -E 's/^\[(libsc|p4est)\] (CC|CPP|CPPFLAGS|CFLAGS|LDFLAGS|LIBS).*$//g'

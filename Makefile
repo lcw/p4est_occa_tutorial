@@ -50,7 +50,19 @@ ifeq ($(UNAME_S),Darwin)
 endif
 
 # Rules
-.PHONY: clean realclean
+.PHONY: clean realclean test
+
+rwildcard = $(foreach d,$(wildcard $1*),$(call rwildcard,$d/,$2) $(filter $2,$d))
+
+test: $(patsubst %.test,%.stdout,$(call rwildcard,,%.test))
+
+%.stdout: %.test tutorial
+	./$< > $@ 2> $(patsubst %.stdout,%.stderr,$@) \
+		|| (touch --date=@0 $@; false)
+	git diff --exit-code --src-prefix=expected/ --dst-prefix=actual/ \
+		$@ $(patsubst %.stdout,%.stderr,$@) \
+		|| (touch --date=@0 $@; false)
+
 clean:
 	rm -rf tutorial
 
