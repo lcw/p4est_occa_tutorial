@@ -1,0 +1,66 @@
+language: c
+
+os:
+  - linux
+  - osx
+  - freebsd
+
+dist: bionic
+osx_image: xcode11.5
+
+arch:
+- amd64
+
+notifications:
+  email: false
+
+cache: ccache
+
+addons:
+  apt:
+    packages:
+      - git
+      - libmpich-dev
+      - autoconf
+      - automake
+      - libtool
+      - make
+  homebrew:
+    packages:
+      - git
+      - mpich
+      - autoconf
+      - automake
+      - libtool
+      - ccache
+    update: true
+
+jobs:
+  allow_failures:
+  - os: freebsd
+
+before_install:
+  - |
+      if [ "$TRAVIS_OS_NAME" = "freebsd" ]; then
+        export MAKE=gmake
+      else
+        export MAKE=make
+      fi
+  - |
+      if [ "$TRAVIS_OS_NAME" = "freebsd" ]; then
+        sudo pkg install -y \
+            autotools \
+            mpich \
+            git \
+            gmake \
+            $NULL
+      fi
+  - |
+      if [ "$TRAVIS_OS_NAME" = "macosx" ]; then
+        export PATH="/usr/local/opt/ccache/libexec:$PATH"
+        export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$TRAVIS_BUILD_DIR/occa/lib"
+      fi
+
+script:
+  - $MAKE
+  - ./tutorial
