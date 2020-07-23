@@ -12,6 +12,8 @@
 .DS_Store
 .\#*
 
+.clangd
+
 /tutorial
 /occa/
 /p4est/
