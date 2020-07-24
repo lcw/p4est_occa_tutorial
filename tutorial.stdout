@@ -12,503 +12,103 @@
 
 
 
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
+[p4est] Into p4est_new with min quadrants 0 level 4 uniform 1
+[p4est]  New p4est with 6 trees on 1 processors
+[p4est]  Initial level 4 potential global quadrants 1536 per tree 256
+[p4est 0]  first tree 0 first quadrant 0 global quadrant 0
+[p4est 0]  last tree 5 last quadrant 255 global quadrant 1535
+[p4est 0]  total local quadrants 1536
+[p4est] Done p4est_new with 1536 total quadrants
+[p4est] Into p4est_refine with 1536 total quadrants, allowed level 29
+[p4est 0]  Into refine tree 0 with 256
+[p4est 0]  Done refine tree 0 now 565
+[p4est 0]  Into refine tree 1 with 256
+[p4est 0]  Done refine tree 1 now 436
+[p4est 0]  Into refine tree 2 with 256
+[p4est 0]  Done refine tree 2 now 541
+[p4est 0]  Into refine tree 3 with 256
+[p4est 0]  Done refine tree 3 now 580
+[p4est 0]  Into refine tree 4 with 256
+[p4est 0]  Done refine tree 4 now 394
+[p4est 0]  Into refine tree 5 with 256
+[p4est 0]  Done refine tree 5 now 538
+[p4est] Done p4est_refine with 3054 total quadrants
+[p4est] Into p4est_coarsen with 3054 total quadrants
+[p4est 0]  Into coarsen tree 0 with 565
+[p4est 0]  Done coarsen tree 0 now 526
+[p4est 0]  Into coarsen tree 1 with 436
+[p4est 0]  Done coarsen tree 1 now 382
+[p4est 0]  Into coarsen tree 2 with 541
+[p4est 0]  Done coarsen tree 2 now 484
+[p4est 0]  Into coarsen tree 3 with 580
+[p4est 0]  Done coarsen tree 3 now 535
+[p4est 0]  Into coarsen tree 4 with 394
+[p4est 0]  Done coarsen tree 4 now 325
+[p4est 0]  Into coarsen tree 5 with 538
+[p4est 0]  Done coarsen tree 5 now 484
+[p4est] Done p4est_coarsen with 2736 total quadrants
+[p4est] Into p4est_balance CORNER with 2736 total quadrants
+[p4est 0]  Into balance tree 0 with 526
+[p4est 0]  Hash size 255 avg 0.0157 std 0.124 checks 0 0
+[p4est 0]  Hash size 255 avg 0.0627 std 0.243 checks 0 0
+[p4est 0]  Hash size 255 avg 0.235 std 0.451 checks 0 0
+[p4est 0]  Tree 0 inlist 18 outlist 507 ancestor 39 insert 36
+[p4est 0]  Balance tree 0 A 562
+[p4est 0]  Into balance tree 1 with 382
+[p4est 0]  Hash size 255 avg 0.0157 std 0.124 checks 0 0
+[p4est 0]  Hash size 255 avg 0.0627 std 0.243 checks 0 0
+[p4est 0]  Hash size 255 avg 0.227 std 0.455 checks 0 0
+[p4est 0]  Tree 1 inlist 23 outlist 352 ancestor 30 insert 39
+[p4est 0]  Balance tree 1 A 421
+[p4est 0]  Into balance tree 2 with 484
+[p4est 0]  Hash size 255 avg 0.0157 std 0.124 checks 0 0
+[p4est 0]  Hash size 255 avg 0.0627 std 0.243 checks 0 0
+[p4est 0]  Hash size 255 avg 0.227 std 0.446 checks 0 0
+[p4est 0]  Tree 2 inlist 12 outlist 480 ancestor 39 insert 51
+[p4est 0]  Balance tree 2 A 535
+[p4est 0]  Into balance tree 3 with 535
+[p4est 0]  Hash size 255 avg 0.0157 std 0.124 checks 0 0
+[p4est 0]  Hash size 255 avg 0.0627 std 0.243 checks 0 0
+[p4est 0]  Hash size 255 avg 0.208 std 0.434 checks 0 0
+[p4est 0]  Tree 3 inlist 12 outlist 534 ancestor 41 insert 36
+[p4est 0]  Balance tree 3 A 571
+[p4est 0]  Into balance tree 4 with 325
+[p4est 0]  Hash size 255 avg 0.0157 std 0.124 checks 0 0
+[p4est 0]  Hash size 255 avg 0.0627 std 0.243 checks 0 0
+[p4est 0]  Hash size 255 avg 0.2 std 0.419 checks 0 0
+[p4est 0]  Tree 4 inlist 19 outlist 328 ancestor 23 insert 54
+[p4est 0]  Balance tree 4 A 379
+[p4est 0]  Into balance tree 5 with 484
+[p4est 0]  Hash size 255 avg 0.0157 std 0.124 checks 0 0
+[p4est 0]  Hash size 255 avg 0.0627 std 0.243 checks 0 0
+[p4est 0]  Hash size 255 avg 0.239 std 0.47 checks 0 0
+[p4est 0]  Tree 5 inlist 17 outlist 492 ancestor 36 insert 51
+[p4est 0]  Balance tree 5 A 535
+[p4est 0]  first send Z 0 L 0 recv Z 0 L 0
+[p4est 0]  second send Z 0 L 0 recv Z 0 L 0
+[p4est 0]  total send 0 recv 0
+[p4est 0]  peer 0 first S 263 R 263 second S 3 R 3
+[p4est 0]  Tree border 0 inlist 0 outlist 0 ancestor 0 insert 0
+[p4est 0]  Balance tree 0 B 562 to 562
+[p4est 0]  Tree border 1 inlist 0 outlist 0 ancestor 0 insert 3
+[p4est 0]  Balance tree 1 B 421 to 424
+[p4est 0]  Tree border 2 inlist 0 outlist 0 ancestor 0 insert 0
+[p4est 0]  Balance tree 2 B 535 to 535
+[p4est 0]  Tree border 3 inlist 0 outlist 0 ancestor 0 insert 3
+[p4est 0]  Balance tree 3 B 571 to 574
+[p4est 0]  Tree border 4 inlist 0 outlist 0 ancestor 0 insert 3
+[p4est 0]  Balance tree 4 B 379 to 382
+[p4est 0]  Tree border 5 inlist 0 outlist 0 ancestor 0 insert 0
+[p4est 0]  Balance tree 5 B 535 to 535
+[p4est]  Global number of shipped quadrants 0
+[p4est 0]  Done balance tree 0 now 562
+[p4est 0]  Done balance tree 1 now 424
+[p4est 0]  Done balance tree 2 now 535
+[p4est 0]  Done balance tree 3 now 574
+[p4est 0]  Done balance tree 4 now 382
+[p4est 0]  Done balance tree 5 now 535
+[p4est]  Into p4est_ghost_new CORNER
+[p4est 0]   Total quadrants skipped 2769 ghosts to receive 0
+[p4est]  Done p4est_ghost_new
+[p4est 0]  Balance skipped 2764
+[p4est] Done p4est_balance with 3012 total quadrants
