@@ -57,12 +57,9 @@ void run(MPI_Comm comm, occaDevice device) {
 }
 
 int main(int argc, char **argv) {
-  int rank, size;
   MPI_Comm comm = MPI_COMM_WORLD;
 
   SC_CHECK_MPI(MPI_Init(&argc, &argv));
-  SC_CHECK_MPI(MPI_Comm_size(comm, &size));
-  SC_CHECK_MPI(MPI_Comm_rank(comm, &rank));
   sc_init(comm, 1, 1, NULL, SC_LP_DEFAULT);
   p4est_init(NULL, SC_LP_DEFAULT);
 
