@@ -15,12 +15,14 @@ for CHFILE in $CHFILES;
 do
   MKTEMPLATE=$(basename "$CHFILE").XXXXXXXX
   TEMPFILE=$(mktemp -t "$MKTEMPLATE") || exit 1
-  clang-format "$GIT_DIR/../$CHFILE" > "$TEMPFILE"
-  if diff "$GIT_DIR/../$CHFILE" "$TEMPFILE"
+  TEMPFILE_FORMATED=$(mktemp -t "$MKTEMPLATE") || exit 1
+  git show :"$CHFILE" > "$TEMPFILE"
+  clang-format "$TEMPFILE" > "$TEMPFILE_FORMATED"
+  if diff "$TEMPFILE" "$TEMPFILE_FORMATED"
   then
-    rm -f "$TEMPFILE"
+    rm -f "$TEMPFILE" "$TEMPFILE_FORMATED"
   else
-    rm -f "$TEMPFILE"
+    rm -f "$TEMPFILE" "$TEMPFILE_FORMATED"
     NEEDS_FORMAT=1
     echo >&2 "$CHFILE needs to be indented with:"
     echo >&2 "   clang-format -i \"$GIT_DIR/../$CHFILE\""
