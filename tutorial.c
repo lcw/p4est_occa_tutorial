@@ -75,11 +75,11 @@ uint32_t pcg32_boundedrand_r(pcg32_random_t *rng, uint32_t bound) {
 // }}}
 
 void run(MPI_Comm comm, occaDevice device) {
-  int entries = 5;
+  int entries = 500;
 
-  float *a = (float *)malloc(entries * sizeof(float));
-  float *b = (float *)malloc(entries * sizeof(float));
-  float *ab = (float *)malloc(entries * sizeof(float));
+  float *a = (float *)calloc(entries, sizeof(float));
+  float *b = (float *)calloc(entries, sizeof(float));
+  float *ab = (float *)calloc(entries, sizeof(float));
 
   for (int i = 0; i < entries; ++i) {
     a[i] = (float)i;
@@ -95,7 +95,7 @@ void run(MPI_Comm comm, occaDevice device) {
       occaDeviceTypedMalloc(device, entries, occaDtypeFloat, NULL, occaDefault);
 
   occaProperties props = occaCreateProperties();
-  occaPropertiesSet(props, "defines/TILE_SIZE", occaInt(10));
+  occaPropertiesSet(props, "defines/blockSize", occaInt(256));
   occaKernel add_vectors =
       occaDeviceBuildKernel(device, "kernels.okl", "add_vectors", props);
 
