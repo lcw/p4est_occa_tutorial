@@ -35,6 +35,7 @@ all: tutorial
 
 occa:
 	tar xzf tpl/occa-*.tar.gz && mv occa-* occa
+	patch -p1 < tpl/occa-glibcfix.patch
 	cd occa && $(MAKE) OCCA_DEVELOPER=1 DEBUG=1 CC=$(CC) CXX=$(CXX) FC=$(FC)
 
 p4est:

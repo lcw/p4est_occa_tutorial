@@ -1,0 +1,18 @@
+--- a/occa/src/tools/sys.cpp	2020-06-04 04:15:06.000000000 -0700
++++ b/occa/src/tools/sys.cpp	2022-12-12 13:37:20.820057014 -0800
+@@ -13,13 +13,14 @@
+ #  include <sys/types.h>
+ #  include <sys/stat.h>
+ #  include <sys/syscall.h>
+-#  include <sys/sysctl.h>
+ #  include <sys/time.h>
+ #  include <unistd.h>
+ #  if (OCCA_OS & OCCA_LINUX_OS)
+ #    include <errno.h>
+ #    include <sys/sysinfo.h>
++#    include <linux/sysctl.h>
+ #  else // OCCA_MACOS_OS
++#    include <sys/sysctl.h>
+ #    include <mach/mach_host.h>
+ #    ifdef __clang__
+ #      include <CoreServices/CoreServices.h>
